@@ -5,6 +5,20 @@
                 <img src="../assets/img/dark-logo.png" alt="Logo" class="img-fluid">
             </figure>
             <PageHeaderMenu :items="menuLinks" />
+            <div class="social-menu">
+                <a href="#">
+                    <font-awesome-icon :icon="['fab', 'instagram']" class="icon-link" />
+                </a>
+                <a href="#">
+                    <font-awesome-icon :icon="['fab', 'twitter']" class="icon-link" />
+                </a>
+                <a href="#">
+                    <font-awesome-icon :icon="['fab', 'youtube']" class="icon-link" />
+                </a>
+                <a href="#">
+                    <font-awesome-icon :icon="['fab', 'linkedin']" class="icon-link" />
+                </a>
+            </div>
         </header>
     </div>
 </template>
@@ -128,10 +142,17 @@ div {
     header {
         height: 80px;
         display: flex;
+        justify-content: space-around;
         align-items: center;
 
         img {
             width: 200px;
+        }
+
+        .icon-link {
+            color: black;
+            margin: 0 10px;
+            font-size: 1.2rem;
         }
     }
 }

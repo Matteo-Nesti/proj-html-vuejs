@@ -1,8 +1,10 @@
 <template>
     <nav class="d-flex">
         <div v-for="item in items">
-            <a href="#">{{ item.title }}</a>
-            <font-awesome-icon :icon="['fas', 'chevron-down']" />
+            <a href="#">
+                {{ item.title }}
+                <font-awesome-icon :icon="['fas', 'chevron-down']" />
+            </a>
         </div>
     </nav>
 </template>
@@ -15,7 +17,7 @@ export default {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../assets/style/vars.scss' as *;
 
 a {
