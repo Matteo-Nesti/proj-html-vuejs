@@ -1,18 +1,21 @@
 <template>
-    <div>
-        <header class="container">
+    <header>
+        <div class="container d-flex align-items-center justify-content-between py-4">
             <HeaderLogo />
             <PageHeaderMenu :items="menuLinks" />
             <SocialLink />
-        </header>
-    </div>
+        </div>
+
+        <HeaderJumbotron />
+    </header>
 </template>
 <script>
+import HeaderJumbotron from './HeaderJumbotron.vue'
 import PageHeaderMenu from './PageHeaderMenu.vue'
 import SocialLink from './SocialLink.vue'
 import HeaderLogo from './HeaderLogo.vue'
 export default {
-    components: { PageHeaderMenu, SocialLink, HeaderLogo },
+    components: { PageHeaderMenu, SocialLink, HeaderLogo, HeaderJumbotron },
     data() {
         return {
             menuLinks: [
@@ -122,15 +125,8 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/style/vars.scss' as *;
 
-div {
+header {
     background-image: url('../assets/img/background-pattern-wavify.png');
     background-color: $light-blue;
-
-    header {
-        height: 80px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
 }
 </style>

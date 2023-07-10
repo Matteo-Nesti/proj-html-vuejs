@@ -1,18 +1,18 @@
 <template>
-    <nav class="d-flex" v-for="(item, i) in items">
+    <nav class="d-flex">
 
-        <div>
+        <div v-for="(item, i) in items">
             <a href="#" @click="showMenu(i)" class="link-title">
                 {{ item.title }}
                 <font-awesome-icon :icon="['fas', 'chevron-down']" />
             </a>
-        </div>
 
-        <ul v-show="dropDrownIndex === i">
-            <li v-for="voice in item.voices">
-                <a href="#">{{ voice }}</a>
-            </li>
-        </ul>
+            <ul v-show="dropDrownIndex === i">
+                <li v-for="voice in item.voices">
+                    <a href="#">{{ voice }}</a>
+                </li>
+            </ul>
+        </div>
 
     </nav>
 </template>
@@ -55,8 +55,8 @@ nav {
     .link-title {
         color: $second-color;
         text-decoration: none;
-        margin: 0 10px;
         font-weight: 500;
+        margin: 0 15px;
     }
 
 }
