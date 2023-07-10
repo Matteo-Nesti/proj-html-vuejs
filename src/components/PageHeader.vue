@@ -1,31 +1,18 @@
 <template>
     <div>
         <header class="container">
-            <figure>
-                <img src="../assets/img/dark-logo.png" alt="Logo" class="img-fluid">
-            </figure>
+            <HeaderLogo />
             <PageHeaderMenu :items="menuLinks" />
-            <div class="social-menu">
-                <a href="#">
-                    <font-awesome-icon :icon="['fab', 'instagram']" class="icon-link" />
-                </a>
-                <a href="#">
-                    <font-awesome-icon :icon="['fab', 'twitter']" class="icon-link" />
-                </a>
-                <a href="#">
-                    <font-awesome-icon :icon="['fab', 'youtube']" class="icon-link" />
-                </a>
-                <a href="#">
-                    <font-awesome-icon :icon="['fab', 'linkedin']" class="icon-link" />
-                </a>
-            </div>
+            <SocialLink />
         </header>
     </div>
 </template>
 <script>
 import PageHeaderMenu from './PageHeaderMenu.vue'
+import SocialLink from './SocialLink.vue'
+import HeaderLogo from './HeaderLogo.vue'
 export default {
-    components: { PageHeaderMenu },
+    components: { PageHeaderMenu, SocialLink, HeaderLogo },
     data() {
         return {
             menuLinks: [
@@ -144,16 +131,6 @@ div {
         display: flex;
         justify-content: space-around;
         align-items: center;
-
-        img {
-            width: 200px;
-        }
-
-        .icon-link {
-            color: black;
-            margin: 0 10px;
-            font-size: 1.2rem;
-        }
     }
 }
 </style>
