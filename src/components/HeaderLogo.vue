@@ -1,6 +1,8 @@
 <template >
     <figure>
-        <img src="../assets/img/dark-logo.png" alt="Logo" class="img-fluid">
+        <a href="#">
+            <img src="../assets/img/dark-logo.png" alt="Logo" class="img-fluid">
+        </a>
     </figure>
 </template>
 <script>
