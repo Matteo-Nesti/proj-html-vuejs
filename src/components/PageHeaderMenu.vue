@@ -2,13 +2,13 @@
     <div class="d-flex">
         <nav v-for="(item, i) in items">
             <div>
-                <a href="#" @click="showMenu(i)" class="link-title">
+                <a href="#" @click="showMenu(i)" class="link-title" :class="{ 'active': currentIndex === i }">
                     {{ item.title }}
                     <font-awesome-icon :icon="['fas', 'chevron-down']" />
                 </a>
             </div>
 
-            <ul v-show="dropDrownIndex === i">
+            <ul v-show="currentIndex === i">
                 <li v-for="voice in item.voices">
                     <a href="#">{{ voice }}</a>
                 </li>
@@ -21,8 +21,7 @@ export default {
 
     data() {
         return {
-            showDropDown: false,
-            dropDrownIndex: NaN,
+            currentIndex: NaN,
         }
     },
 
@@ -32,11 +31,11 @@ export default {
 
     methods: {
         showMenu(index) {
-            if (this.dropDrownIndex === index) {
-                this.dropDrownIndex = NaN
+            if (this.currentIndex === index) {
+                this.currentIndex = NaN
             }
             else {
-                this.dropDrownIndex = index
+                this.currentIndex = index
             }
         }
     },
@@ -80,5 +79,10 @@ ul {
         color: $dark-gray;
         text-decoration: none;
     }
+}
+
+.link-title.active {
+    color: $main-color;
+    border-bottom: $main-color solid 1px;
 }
 </style>
