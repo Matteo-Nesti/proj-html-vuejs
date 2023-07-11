@@ -24,7 +24,7 @@
                     <img src="../assets/img/home-movation-video-poster-670x450.jpg" alt="video-youtube" class="img-fluid">
                 </figure>
             </div>
-            <div class="col-5 align-self">
+            <div class="col-5 align-self-center">
                 <p class="p-youtube">
                     "Every Morning you have two choices: continue to sleep with your dreams, or wake up and chase them."
                 </p>
