@@ -22,4 +22,16 @@ export default {
 
 <style lang="scss">
 @use './assets/style/vars.scss' as *;
+
+.btn {
+  background-color: $main-color;
+  color: $full-white;
+  font-weight: 500;
+  padding: .7rem 2rem;
+
+  &:hover {
+    background-color: $second-color;
+    color: $full-white;
+  }
+}
 </style>

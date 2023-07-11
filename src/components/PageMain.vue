@@ -16,6 +16,7 @@ import PageMainStats from './PageMainStats.vue'
 import PageMainAboutMe from './PageMainAboutMe.vue'
 import PageMainCourses from './PageMainCourses.vue'
 
+
 export default {
     components: { PageMainStats, PageMainAboutMe, PageMainCourses, },
     data() {

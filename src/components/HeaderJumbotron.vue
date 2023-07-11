@@ -4,8 +4,12 @@
             <div class="col-6 p-5">
                 <h5>I'M WINGMAN</h5>
                 <p class="fs-1">Peace On Earth A Wonderful Wish But No Way</p>
-                <p>Success isn't overnight. It's when everyday get a little better than day before. It all adds up.</p>
-                <button class="btn">Get started for free -></button>
+                <p>Success isn't overnight. It's when everyday get a little better than day before. It all adds up.
+
+                </p>
+                <PageButton>
+                    Get Started For Free
+                </PageButton>
             </div>
             <figure class="col-6">
                 <img src="../assets/img/home-movation-hero-image.png" alt="figure">
@@ -16,8 +20,9 @@
 </template>
 <script>
 import JumbotronLeftMenu from './JumbotronLeftMenu.vue';
+import PageButton from './PageButton.vue';
 export default {
-    components: { JumbotronLeftMenu }
+    components: { JumbotronLeftMenu, PageButton }
 }
 </script>
 <style lang="scss" scoped>
@@ -34,7 +39,7 @@ export default {
     }
 
     figure {
-        background-image: url(../assets/img/home-movation-shape-face.png);
+        background-image: url('../assets/img/home-movation-shape-face.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 0px 100px;
@@ -42,17 +47,6 @@ export default {
 
         img {
             display: block;
-        }
-    }
-
-    .btn {
-        background-color: $main-color;
-        color: $full-white;
-        font-weight: 500;
-        padding: .7rem 2rem;
-
-        &:hover {
-            background-color: $second-color;
         }
     }
 

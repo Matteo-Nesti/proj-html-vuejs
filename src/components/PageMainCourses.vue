@@ -1,8 +1,8 @@
 <template>
     <div class="container">
 
-        <h5>BEGIN YOUR JOURNEY AT MAXCOACH</h5>
-        <h2>Latest Online Courses</h2>
+        <h6>BEGIN YOUR JOURNEY AT MAXCOACH</h6>
+        <h2>Latest <span> Online Courses</span></h2>
 
         <div class="row row-cols-3">
             <div class="custom-card" v-for="item in items">
@@ -21,11 +21,17 @@
                 </div>
             </div>
         </div>
+
+        <PageButton>
+            View all Courses ->
+        </PageButton>
     </div>
 </template>
 
 <script>
+import PageButton from './PageButton.vue'
 export default {
+    components: { PageButton },
     props: {
         items: Array,
     }
@@ -37,12 +43,28 @@ export default {
 
 .container {
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h6 {
+    color: $dark-gray;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+
+    span {
+        color: $main-color;
+    }
 }
 
 .custom-card {
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 
     .card-description {
         padding: 1rem 3rem;
