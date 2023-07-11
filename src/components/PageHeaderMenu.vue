@@ -1,27 +1,28 @@
 <template>
-    <div class="d-flex">
-        <nav v-for="(item, i) in items">
+    <nav class="d-flex ">
+        <div v-for="(item, i) in items" class="header-menu" @mouseover="showMenu(i)" @mouseout="hideMenu">
             <div>
-                <a href="#" @click="showMenu(i)" class="link-title" :class="{ 'active': currentIndex === i }">
+                <a href="#" class="link-title px-3" :class="{ 'active': currentIndex === i }">
                     {{ item.title }}
                     <font-awesome-icon :icon="['fas', 'chevron-down']" />
                 </a>
             </div>
 
-            <ul v-show="currentIndex === i">
+            <ul v-show="isMenuVisible(i)">
                 <li v-for="voice in item.voices">
                     <a href="#">{{ voice }}</a>
                 </li>
             </ul>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </template>
 <script>
 export default {
 
     data() {
         return {
-            currentIndex: NaN,
+            currentIndex: null,
+            dropDownHover: false,
         }
     },
 
@@ -31,12 +32,18 @@ export default {
 
     methods: {
         showMenu(index) {
-            if (this.currentIndex === index) {
-                this.currentIndex = NaN
-            }
-            else {
-                this.currentIndex = index
-            }
+            this.currentIndex = index
+            this.dropDownHover = true
+
+        },
+
+        hideMenu() {
+            this.dropDownHover = false
+            this.currentIndex = null
+        },
+
+        isMenuVisible(index) {
+            return this.currentIndex === index && (this.currentIndex !== null || this.dropDownHover);
         }
     },
 }
@@ -48,13 +55,12 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/style/vars.scss' as *;
 
-nav {
+.header-menu {
     position: relative;
 
     .link-title {
         color: $second-color;
         text-decoration: none;
-        margin: 0 15px;
         font-weight: 500;
     }
 
@@ -66,7 +72,7 @@ ul {
     list-style: none;
     position: absolute;
     left: -30px;
-    top: 30px;
+    top: 25px;
     background-color: $full-white;
     border-bottom: $main-color solid 2px;
     z-index: 1;
