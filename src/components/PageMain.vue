@@ -4,18 +4,14 @@
     </section>
 
     <section id="about-me">
-        <div class="container my-5">
-            <div class="row justify-content-center align-items-center text-center">
-                <div class="col-5">dad</div>
-                <div class="col-7">dad</div>
-            </div>
-        </div>
+        <PageMainAboutMe />
     </section>
 </template>
 <script>
 import PageMainStats from './PageMainStats.vue'
+import PageMainAboutMe from './PageMainAboutMe.vue'
 export default {
-    components: { PageMainStats },
+    components: { PageMainStats, PageMainAboutMe },
     data() {
         return {
             dates: [
