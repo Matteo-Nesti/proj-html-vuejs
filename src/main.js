@@ -11,6 +11,21 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faChevronDown, faTwitter, faInstagram, faYoutube, faLinkedin);
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCrosshairs } from "@fortawesome/free-solid-svg-icons";
+import { faRulerCombined } from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+  faChevronDown,
+  faTwitter,
+  faInstagram,
+  faYoutube,
+  faLinkedin,
+  faBook,
+  faCartShopping,
+  faCrosshairs,
+  faRulerCombined
+);
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

@@ -1,37 +1,37 @@
 <template >
-    <div id="jumbo" class="container">
-        <div class="col-6 p-5">
-            <h5>I'M WINGMAN</h5>
-            <p class="fs-1">Peace On Earth A Wonderful Wish But No Way</p>
-            <p>Success isn't overnight. It's when everyday get a little better than day before. It all adds up.</p>
-            <button class="btn">Get started for free -></button>
-        </div>
-        <figure class="col-6">
-            <img src="../assets/img/home-movation-hero-image.png" alt="figure">
-            <div>
-                <ul class="lateral-manu">
-                    <li>c</li>
-                    <li>c</li>
-                    <li>c</li>
-                    <li>c</li>
-                </ul>
+    <div id="jumbo">
+        <div class="container custom-row">
+            <div class="col-6 p-5">
+                <h5>I'M WINGMAN</h5>
+                <p class="fs-1">Peace On Earth A Wonderful Wish But No Way</p>
+                <p>Success isn't overnight. It's when everyday get a little better than day before. It all adds up.</p>
+                <button class="btn">Get started for free -></button>
             </div>
-        </figure>
+            <figure class="col-6">
+                <img src="../assets/img/home-movation-hero-image.png" alt="figure">
+            </figure>
+        </div>
+        <JumbotronLeftMenu />
     </div>
 </template>
 <script>
+import JumbotronLeftMenu from './JumbotronLeftMenu.vue';
 export default {
-
+    components: { JumbotronLeftMenu }
 }
 </script>
 <style lang="scss" scoped>
 @use '../assets/style/vars.scss' as *;
 
 #jumbo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding-top: 2rem;
+    position: relative;
+
+    .custom-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 
     figure {
         background-image: url(../assets/img/home-movation-shape-face.png);
@@ -39,7 +39,6 @@ export default {
         background-repeat: no-repeat;
         background-position: 0px 100px;
         margin: 0;
-        position: relative;
 
         img {
             display: block;
@@ -51,6 +50,11 @@ export default {
         color: $full-white;
         font-weight: 500;
         padding: .7rem 2rem;
+
+        &:hover {
+            background-color: $second-color;
+        }
     }
+
 }
 </style>
