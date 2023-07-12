@@ -70,6 +70,11 @@ export default {
     margin-bottom: 5rem;
 }
 
+.articles-cards:hover {
+    box-shadow: 1px 1px 10px rgb(207, 207, 207);
+    cursor: pointer;
+}
+
 h2 {
     font-size: 2.5rem;
     margin-bottom: 5rem;
@@ -101,5 +106,11 @@ figure {
     span {
         border-bottom: 1px solid $main-color;
     }
+
+}
+
+span:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
 </style>

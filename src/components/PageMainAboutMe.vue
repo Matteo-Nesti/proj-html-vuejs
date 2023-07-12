@@ -86,8 +86,10 @@ export default {
             top: 50%;
             translate: -50% -50%;
             cursor: pointer;
+
         }
     }
+
 
     .p-youtube {
         font-size: 1.5rem;
@@ -98,5 +100,11 @@ export default {
     h6 {
         color: $dark-gray;
     }
+
+}
+
+.icon:hover {
+    scale: 1.1;
+
 }
 </style>

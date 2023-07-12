@@ -22,9 +22,9 @@
         </div>
         <div class="slider-button">
 
-            <font-awesome-icon :icon="['fas', 'angle-up']" @click="nextIndex()" />
+            <font-awesome-icon :icon="['fas', 'angle-up']" @click="nextIndex()" class="pointer" />
             <div>{{ currentIndex }}/{{ testimonials.length }}</div>
-            <font-awesome-icon :icon="['fas', 'angle-down']" @click="prevIndex()" />
+            <font-awesome-icon :icon="['fas', 'angle-down']" @click="prevIndex()" class="pointer" />
 
         </div>
 
@@ -154,5 +154,10 @@ export default {
     img {
         width: 100%;
     }
+}
+
+.pointer:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
 </style>
