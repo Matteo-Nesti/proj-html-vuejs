@@ -23,7 +23,11 @@ export default {
                 [
                     {
                         leftTitle: 'Explore',
-                        leftLink: ['Start Here', 'Blog', 'About Us', 'Success Story', 'Courses', 'Contact us']
+                        leftLink: ['Start Here', 'Blog', 'About Us'],
+                    },
+
+                    {
+                        centralLink: ['Success Story', 'Courses', 'Contact us'],
                     },
 
                     {

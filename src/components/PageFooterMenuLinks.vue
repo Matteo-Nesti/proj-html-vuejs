@@ -1,9 +1,42 @@
 <template>
-    <div v-for="item in items">
-        <h3>{{ item.leftTitle }}</h3>
-        <div v-for="link in item.leftLink" class="list">
-            {{ link }}
+    <div class="row align-items-end">
+
+        <div class="col-4">
+            <ul v-for="item in items">
+                <li>
+                    <h3>{{ item.leftTitle }}</h3>
+                </li>
+                <li>
+                    <div class="list" v-for="link in item.leftLink">
+                        {{ link }}
+                    </div>
+                </li>
+            </ul>
         </div>
+
+        <div class="col-4">
+            <ul v-for="item in items">
+                <li>
+                    <div class="list" v-for="link in item.centralLink">
+                        {{ link }}
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <ul v-for="item in items">
+                <li>
+                    <h3>{{ item.leftTitle }}</h3>
+                </li>
+                <li>
+                    <div class="list" v-for="link in item.rightLink">
+                        {{ link }}
+                    </div>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </template>
 
@@ -27,6 +60,7 @@ h3 {
 }
 
 .list {
-    color: white;
+    color: rgb(141, 141, 141);
+
 }
 </style>
