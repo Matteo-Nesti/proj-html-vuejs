@@ -105,6 +105,6 @@ export default {
 
 .icon:hover {
     scale: 1.1;
-
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.8));
 }
 </style>
