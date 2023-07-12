@@ -26,8 +26,8 @@
                 </li>
 
                 <li v-else>
-                    <h3></h3>
-                <li v-for="link in item.centralLink" class="center-list">
+                    <h3 class="center-list"></h3>
+                <li v-for="link in item.centralLink">
                     <a href="#" class="list">
                         {{ link }}
                     </a>
@@ -74,6 +74,6 @@ a {
 }
 
 .center-list {
-    margin-top: 40px;
+    margin-bottom: 42px;
 }
 </style>
