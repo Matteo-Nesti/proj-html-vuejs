@@ -1,24 +1,38 @@
 <template>
-    <section id="dates">
+    <section id="dates" class="my-5">
         <PageMainStats :items="dates" />
     </section>
 
-    <section id="about-me">
+    <section id="about-me" class="my-5">
         <PageMainAboutMe />
     </section>
 
-    <section>
-        <PageMainCourses :items="cardsInfo" />
+    <section class="my-5">
+        <PageMainCoursesCards :items="cardsInfo" />
+    </section>
+
+    <section class="my-5">
+        <MainPageBooks />
+    </section>
+
+    <section class="my-5">
+        <PageMainSponsor />
+    </section>
+
+    <section class="my-5">
+        <MainPageSlider />
     </section>
 </template>
 <script>
 import PageMainStats from './PageMainStats.vue'
 import PageMainAboutMe from './PageMainAboutMe.vue'
-import PageMainCourses from './PageMainCourses.vue'
-
+import PageMainCoursesCards from './PageMainCoursesCards.vue'
+import MainPageBooks from './MainPageBooks.vue'
+import PageMainSponsor from './PageMainSponsor.vue'
+import MainPageSlider from './MainPageSlider.vue'
 
 export default {
-    components: { PageMainStats, PageMainAboutMe, PageMainCourses, },
+    components: { PageMainStats, PageMainAboutMe, PageMainCoursesCards, MainPageBooks, PageMainSponsor, MainPageSlider },
     data() {
         return {
             dates: [

@@ -17,6 +17,12 @@ import { faCrosshairs } from "@fortawesome/free-solid-svg-icons";
 import { faRulerCombined } from "@fortawesome/free-solid-svg-icons";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faSignal } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faChevronDown,
@@ -29,7 +35,13 @@ library.add(
   faCrosshairs,
   faRulerCombined,
   faNewspaper,
-  faUser
+  faUser,
+  faCheck,
+  faMagnifyingGlass,
+  faHeart,
+  faSignal,
+  faAngleUp,
+  faAngleDown
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

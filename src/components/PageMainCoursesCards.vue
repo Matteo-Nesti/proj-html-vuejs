@@ -65,6 +65,7 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 5rem;
+    padding-top: 1rem;
 
     .card-description {
         padding: 1rem 3rem;
@@ -82,6 +83,11 @@ h2 {
         color: $dark-gray;
         font-size: 1.1rem;
         margin-right: .8rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 10px rgb(207, 207, 207);
     }
 
 }
