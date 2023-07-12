@@ -36,4 +36,9 @@ figure {
 .sponsor {
     opacity: .3;
 }
+
+.sponsor:hover {
+    opacity: 1;
+    cursor: pointer;
+}
 </style>
