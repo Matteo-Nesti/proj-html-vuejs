@@ -43,7 +43,7 @@ export default {
         },
 
         isMenuVisible(index) {
-            return this.currentIndex === index && (this.currentIndex !== null || this.dropDownHover);
+            return this.currentIndex === index && this.dropDownHover;
         }
     },
 }
