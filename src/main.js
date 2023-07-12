@@ -10,6 +10,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
@@ -43,7 +44,8 @@ library.add(
   faSignal,
   faAngleUp,
   faAngleDown,
-  faCalendarDays
+  faCalendarDays,
+  faFacebook
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

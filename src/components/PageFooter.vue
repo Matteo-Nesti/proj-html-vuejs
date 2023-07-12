@@ -1,26 +1,25 @@
 <template>
     <footer>
+        <div class="row">
+            <div class="col">
+                <PageFooterAddress />
+            </div>
 
+            <div class="col">
+                <PageFooterMenuLinks :items="menuLinks" />
+            </div>
+        </div>
     </footer>
 </template>
 
 <script>
-import PageFooterAddress from './PagefooterAddres.vue'
+import PageFooterAddress from './PagefooterAddress.vue'
+import PageFooterMenuLinks from './PageFooterMenuLinks.vue'
 export default {
-
+    components: { PageFooterAddress, PageFooterMenuLinks },
     data() {
         return {
-            address:
-                [
-                    {
-                        address: '382 NE 191st St # 87394 Miami, FL 33179-3899',
-                        phone: '+1(305)547-9909',
-                        timeTable: '(9am - 5pm EST. monday - friday)',
-                        mail: 'Support@maccoach.com'
-                    }
-                ],
-
-            leftMenuLinks:
+            menuLinks:
                 [
                     {
                         leftTitle: 'Explore',
@@ -38,4 +37,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/style/vars.scss' as *;
+
+footer {
+    padding: 5rem;
+    background-color: #171621;
+}
+</style>
