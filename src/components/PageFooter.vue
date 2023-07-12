@@ -1,13 +1,21 @@
 <template>
     <footer>
-        <div class="row">
-            <div class="col">
+        <div class="row justify-content-center">
+            <div class="col-6">
                 <PageFooterAddress />
             </div>
 
-            <div class="col">
+            <div class="col-6">
                 <PageFooterMenuLinks :items="menuLinks" />
             </div>
+
+            <div class="col-auto mt-5">
+                <div class="copyright">
+                    <font-awesome-icon :icon="['fas', 'copyright']" />
+                    2020 maxcoach. All Rights Reserved
+                </div>
+            </div>
+
         </div>
     </footer>
 </template>
@@ -47,5 +55,10 @@ export default {
 footer {
     padding: 5rem;
     background-color: #171621;
+
+    .copyright {
+        color: rgb(141, 141, 141);
+
+    }
 }
 </style>

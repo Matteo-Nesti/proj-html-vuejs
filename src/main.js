@@ -25,6 +25,7 @@ import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
+import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faChevronDown,
@@ -45,7 +46,8 @@ library.add(
   faAngleUp,
   faAngleDown,
   faCalendarDays,
-  faFacebook
+  faFacebook,
+  faCopyright
 );
 
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");

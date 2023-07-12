@@ -37,6 +37,11 @@ p {
     color: rgb(141, 141, 141);
     font-weight: 500;
     margin-bottom: 1rem;
+
+    &:hover {
+        color: $full-white;
+        cursor: pointer;
+    }
 }
 
 .social-icon {
@@ -46,5 +51,11 @@ p {
     .icon {
         margin-right: .6rem;
     }
+
+}
+
+.icon:hover {
+    color: $full-white;
+    cursor: pointer;
 }
 </style>

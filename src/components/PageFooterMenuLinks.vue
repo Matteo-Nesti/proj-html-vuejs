@@ -6,20 +6,20 @@
                 <li>
                     <h3>{{ item.leftTitle }}</h3>
                 </li>
-                <li>
-                    <div class="list" v-for="link in item.leftLink">
+                <li v-for="link in item.leftLink">
+                    <a href="#" class="list">
                         {{ link }}
-                    </div>
+                    </a>
                 </li>
             </ul>
         </div>
 
         <div class="col-4">
             <ul v-for="item in items">
-                <li>
-                    <div class="list" v-for="link in item.centralLink">
+                <li v-for="link in item.centralLink">
+                    <a href="#" class="list">
                         {{ link }}
-                    </div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -29,10 +29,10 @@
                 <li>
                     <h3>{{ item.leftTitle }}</h3>
                 </li>
-                <li>
-                    <div class="list" v-for="link in item.rightLink">
+                <li v-for="link in item.rightLink">
+                    <a href="#" class="list">
                         {{ link }}
-                    </div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -57,6 +57,14 @@ ul {
 
 h3 {
     color: $full-white;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $full-white;
+    }
 }
 
 .list {
