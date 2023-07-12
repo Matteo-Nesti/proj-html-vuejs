@@ -1,41 +1,43 @@
 <template>
     <div class="row align-items-end">
 
-        <div class="col-4">
-            <ul v-for="item in items">
-                <li>
-                    <h3>{{ item.leftTitle }}</h3>
-                </li>
-                <li v-for="link in item.leftLink">
-                    <a href="#" class="list">
-                        {{ link }}
-                    </a>
-                </li>
-            </ul>
-        </div>
 
-        <div class="col-4">
-            <ul v-for="item in items">
-                <li v-for="link in item.centralLink">
-                    <a href="#" class="list">
-                        {{ link }}
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <div class="col-4" v-for="item in items">
+            <ul>
+                <li v-if="item.rightTitle">
 
-        <div class="col-4">
-            <ul v-for="item in items">
-                <li>
-                    <h3>{{ item.leftTitle }}</h3>
-                </li>
+                    <h3>{{ item.rightTitle }}</h3>
+
                 <li v-for="link in item.rightLink">
                     <a href="#" class="list">
                         {{ link }}
                     </a>
                 </li>
+
+                </li>
+
+                <li v-else-if="item.leftTitle">
+                    <h3>{{ item.leftTitle }}</h3>
+                <li v-for="link in item.leftLink">
+                    <a href="#" class="list">
+                        {{ link }}
+                    </a>
+                </li>
+                </li>
+
+                <li v-else>
+                    <h3></h3>
+                <li v-for="link in item.centralLink">
+                    <a href="#" class="list">
+                        {{ link }}
+                    </a>
+                </li>
+                </li>
+
             </ul>
         </div>
+
+
 
     </div>
 </template>

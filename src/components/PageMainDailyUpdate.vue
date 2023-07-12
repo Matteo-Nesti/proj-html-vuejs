@@ -68,6 +68,8 @@ export default {
 
 .articles-cards {
     margin-bottom: 5rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
 }
 
 .articles-cards:hover {
