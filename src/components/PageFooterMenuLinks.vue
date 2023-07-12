@@ -1,5 +1,5 @@
 <template>
-    <div class="row align-items-end">
+    <div class="row align-items-start">
 
 
         <div class="col-4" v-for="item in items">
@@ -27,7 +27,7 @@
 
                 <li v-else>
                     <h3></h3>
-                <li v-for="link in item.centralLink">
+                <li v-for="link in item.centralLink" class="center-list">
                     <a href="#" class="list">
                         {{ link }}
                     </a>
@@ -71,5 +71,9 @@ a {
 .list {
     color: rgb(141, 141, 141);
 
+}
+
+.center-list {
+    margin-top: 40px;
 }
 </style>
