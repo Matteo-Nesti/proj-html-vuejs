@@ -22,6 +22,10 @@
     <section class="my-5">
         <MainPageSlider />
     </section>
+
+    <section class="my-5">
+        <PageMainDailyUpdate />
+    </section>
 </template>
 <script>
 import PageMainStats from './PageMainStats.vue'
@@ -30,9 +34,10 @@ import PageMainCoursesCards from './PageMainCoursesCards.vue'
 import MainPageBooks from './MainPageBooks.vue'
 import PageMainSponsor from './PageMainSponsor.vue'
 import MainPageSlider from './MainPageSlider.vue'
+import PageMainDailyUpdate from './PageMainDailyUpdate.vue'
 
 export default {
-    components: { PageMainStats, PageMainAboutMe, PageMainCoursesCards, MainPageBooks, PageMainSponsor, MainPageSlider },
+    components: { PageMainStats, PageMainAboutMe, PageMainCoursesCards, MainPageBooks, PageMainSponsor, MainPageSlider, PageMainDailyUpdate },
     data() {
         return {
             dates: [
