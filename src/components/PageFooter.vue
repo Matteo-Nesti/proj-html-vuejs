@@ -58,6 +58,7 @@ export default {
 footer {
     padding: 5rem;
     background-color: #171621;
+    position: relative;
 
     .copyright {
         color: rgb(141, 141, 141);
@@ -73,7 +74,7 @@ footer {
     text-align: center;
     border-radius: 50%;
 
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
     cursor: pointer;
