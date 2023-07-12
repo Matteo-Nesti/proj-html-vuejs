@@ -10,7 +10,7 @@
 
             <ul v-show="isMenuVisible(i)">
                 <li v-for="voice in item.voices">
-                    <a href="#">{{ voice }}</a>
+                    <a href="#" class="voice-menu">{{ voice }}</a>
                 </li>
             </ul>
         </div>
@@ -90,5 +90,9 @@ ul {
 .link-title.active {
     color: $main-color;
     border-bottom: $main-color solid 1px;
+}
+
+.voice-menu:hover {
+    color: $main-color;
 }
 </style>

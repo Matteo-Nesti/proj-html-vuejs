@@ -16,6 +16,9 @@
                 </div>
             </div>
 
+            <div class="circle-button">
+                <font-awesome-icon :icon="['fas', 'angle-up']" />
+            </div>
         </div>
     </footer>
 </template>
@@ -59,6 +62,24 @@ footer {
     .copyright {
         color: rgb(141, 141, 141);
 
+    }
+}
+
+.circle-button {
+    background-color: $main-color;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.1;
     }
 }
 </style>
